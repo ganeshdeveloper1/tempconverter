@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>TEMPERATURE</title>
+            <style>
+                body{
+                    background-image: url("tp.jpg");
+                    background-size: auto;
+                    background-position: center;
+                }
+                h1{
+                    width:25%;
+                    border: 2px solid;
+                }
+            </style>
+        </head>
+       
+        <body>
+            <center>
+                <h1 style=color:darkgreen>Temperature Converter</h1>
+                <br>
+                <input id="n1" type="text" oninput="k()" placeholder="Temperature in kelvin">
+                <br>
+                <input id="n2" type="text" oninput="c()" placeholder="Temperature in celsius">
+                <br>
+            </center>
+        </body> 
+            <script>
+                function k(){
+                             var k=document.getElementById("n1").value;
+                             document.getElementById("n2").value=parseInt(k)-273.15;
+                }
+                function c(){
+                    var c=document.getElementById("n2").value;
+                    document.getElementById("n1").value=parseInt(c)+273.15;
+                }
+            </script>
+             
+        </html>
+    
